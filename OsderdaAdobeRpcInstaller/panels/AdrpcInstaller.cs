@@ -21,9 +21,9 @@ namespace OsderdaAdobeRpcInstaller.panels
         }
         private int progressChunk => 100 / 1;
         private int iteration = 0;
-        private void setProgress(int baseAmount)
+        private void setProgress(int bse)
         {
-            progressBar1.Value = ((baseAmount * progressChunk) / 100) + (progressChunk * iteration);
+            progressBar1.Value = ((bse * progressChunk) / 100) + (progressChunk * iteration);
         }
         private void write(string text)
         {
@@ -63,7 +63,7 @@ namespace OsderdaAdobeRpcInstaller.panels
                 await Task.Delay(1000);
                 write($"\t-({folder})\n");
                 await Task.Delay(2000);
-                write($"\n");
+                write("\n");
                 if (Directory.Exists(Application.StartupPath + "\\data") == false)
                 {
                     Directory.CreateDirectory(Application.StartupPath + "\\data");
@@ -89,7 +89,7 @@ namespace OsderdaAdobeRpcInstaller.panels
                 setProgress(50);
                 write("\t-Downloaded\n");
                 await Task.Delay(2000);
-                write($"\n");
+                write("\n");
                 write("> Extracting\n");
                 try
                 {
@@ -116,7 +116,7 @@ namespace OsderdaAdobeRpcInstaller.panels
 
                 }
                 await Task.Delay(2000);
-                write($"\n");
+                write("\n");
                 write("> Adding to Adobe plugins...\n");
                 Microsoft.Win32.RegistryKey key;
                 key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\\Adobe\\CSXS.11");
@@ -125,13 +125,13 @@ namespace OsderdaAdobeRpcInstaller.panels
                 setProgress(85);
                 write("\t-Added to Adobe plugins!\n");
                 await Task.Delay(2000);
-                write($"\n");
+                write("\n");
                 write("[!] Adobe Discord Rpc installation completed!\n");
                 await Task.Delay(1000);
                 write("\t-Now start an adoba software.\n");
                 setProgress(100);
                 await Task.Delay(1000);
-                write($"\n");
+                write("\n");
                 write("[!] Installer Created By Osderda\n");
             }
             return 1;
@@ -159,6 +159,13 @@ namespace OsderdaAdobeRpcInstaller.panels
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            richTextBox1.SelectionStart = richTextBox1.Text.Length;
+            richTextBox1.ScrollToCaret();
         }
     }
 }
