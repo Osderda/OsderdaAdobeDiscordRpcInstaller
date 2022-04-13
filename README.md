@@ -5,7 +5,7 @@
 ![Osderda](https://github.com/Osderda/OsderdaAdobeDiscordRpcInstaller/blob/add-license-1/video/installer.gif)
 
 - This Intaller project belongs to me!
-- [adobe-discord-rpc](https://github.com/lolitee/adobe-discord-rpc/) Project. 
+- This [adobe-discord-rpc](https://github.com/lolitee/adobe-discord-rpc/) Project. 
 </div>
 <h2 align="center" >My Accounts</h2>
 <p align="center">
