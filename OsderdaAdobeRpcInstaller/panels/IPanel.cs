@@ -9,5 +9,6 @@ namespace OsderdaAdobeRpcInstaller.Panels {
         UserControl Control { get; }
         PanelTypes PreviousPanel { get; }
         PanelTypes NextPanel { get; }
+
     }
 }
